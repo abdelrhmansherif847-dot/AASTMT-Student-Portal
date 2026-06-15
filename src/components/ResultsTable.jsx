@@ -58,11 +58,13 @@ export default function ResultsTable() {
                 <tr key={row.code} className={rowBg}>
                   <td
                     className={`${codeBg} ${cellBase} font-bold text-[14px] text-left whitespace-nowrap`}
-                    style={{ borderRight: `2px solid ${TEAL}` }}
                   >
                     {row.code}
                   </td>
-                  <td className={`${cellBase} text-[14px] text-left`}>
+                  <td
+                    className={`${cellBase} text-[14px] text-left`}
+                    style={{ borderRight: `2px solid ${TEAL}` }}
+                  >
                     {row.name}
                   </td>
                   <td className={`${cellBase} text-[14px] text-center`}>
