@@ -42,7 +42,10 @@ export default function Sidebar({ onNavigate }) {
         className="relative h-[170px] bg-cover bg-center text-white"
         style={{ backgroundImage: campusBg }}
       >
-        <div className="absolute inset-0 bg-black/35" />
+        {/* Soft gradient only over the bottom half so the student name stays
+            readable on the bright building/palms area, while preserving the
+            bilingual AAST overlay baked into the top of the banner. */}
+        <div className="absolute inset-x-0 bottom-0 h-[80%] bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         <div className="relative h-full flex flex-col justify-end p-3">
           <div className="flex items-end gap-2 mb-1">
             <img
