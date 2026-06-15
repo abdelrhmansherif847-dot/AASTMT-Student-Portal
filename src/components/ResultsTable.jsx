@@ -51,8 +51,8 @@ export default function ResultsTable() {
           <tbody>
             {semesterResults.map((row, idx) => {
               const stripe = idx % 2 === 1
-              const rowBg = stripe ? 'bg-[#c4c9cf]' : 'bg-white'
-              const codeBg = stripe ? 'bg-[#a9aeb4]' : 'bg-[#bcc1c8]'
+              const rowBg = stripe ? 'bg-[#d2d5d8]' : 'bg-white'
+              const codeBg = stripe ? 'bg-[#b6b9bc]' : 'bg-[#c4c7ca]'
               const cellBase = 'px-3 py-3 text-[#1a1a1a]'
               return (
                 <tr key={row.code} className={rowBg}>
