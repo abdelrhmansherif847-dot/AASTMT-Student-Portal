@@ -38,26 +38,36 @@ export default function Sidebar({ onNavigate }) {
 
   return (
     <aside className="w-[290px] shrink-0 bg-white border-r border-portal-borderLight h-[calc(100vh-63px)] overflow-y-auto portal-scroll shadow-sidebar">
-      <div
-        className="relative h-[200px] bg-cover bg-center text-white overflow-hidden"
-        style={{ backgroundImage: campusBg }}
-      >
-        {/* Heavy dark overlay so the campus image is only faintly visible,
-            matching the real portal where everything is on a dark navy band. */}
-        <div className="absolute inset-0 bg-[#0e1b2c]/75" />
+      <div className="relative h-[200px] text-white overflow-hidden">
+        {/* Real campus banner image — full quality, same crop/angle as the
+            reference. Slight navy tint + bottom gradient match the real
+            portal without hiding the building. */}
+        <img
+          src="/sidebar-banner.jpg"
+          alt="AASTMT"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#0b1d33]/35" />
+        <div className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-black/70 to-transparent" />
         <div className="relative h-full flex flex-col justify-end p-3 gap-2">
           <img
             src={student.avatar}
             alt={student.name}
-            className="w-[48px] h-[48px] rounded-full ring-2 ring-white object-cover shrink-0"
+            className="w-[52px] h-[52px] rounded-full ring-2 ring-white object-cover shrink-0"
           />
           <div className="leading-tight">
-            <div className="font-bold text-[16px] leading-snug">
+            <div
+              className="font-bold text-[16px] leading-snug"
+              style={{ textShadow: '0 1px 3px rgba(0,0,0,0.9)' }}
+            >
               {student.name.split(' ').slice(0, 4).join(' ')}
               <br />
               {student.name.split(' ').slice(4).join(' ')}
             </div>
-            <div className="text-[13px] text-white/85 mt-1.5">
+            <div
+              className="text-[13px] text-white/90 mt-1.5 font-medium"
+              style={{ textShadow: '0 1px 2px rgba(0,0,0,0.9)' }}
+            >
               {student.registrationNumber}
             </div>
           </div>
