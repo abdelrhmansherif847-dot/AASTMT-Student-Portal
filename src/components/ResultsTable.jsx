@@ -10,7 +10,7 @@ const columns = [
   { key: 'finalGrade', label: 'Final Grade', finalCol: true, align: 'center' },
 ]
 
-const TEAL = '#1c8db0'
+const TEAL = '#147a9c'
 
 export default function ResultsTable() {
   const { results: semesterResults } = useSemester()
@@ -19,7 +19,7 @@ export default function ResultsTable() {
       <div className="overflow-x-auto">
         <table className="w-full border-collapse text-[14px]">
           <thead>
-            <tr className="bg-[#1c8db0] text-white">
+            <tr className="bg-[#147a9c] text-white">
               {columns.map((c, i) => (
                 <th
                   key={c.key}

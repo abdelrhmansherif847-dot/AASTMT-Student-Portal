@@ -14,7 +14,7 @@ export default function SemesterAchievement() {
       <div className="overflow-hidden">
         <table className="w-full text-[15px] border-collapse">
           <thead>
-            <tr className="bg-[#1c8db0] text-white">
+            <tr className="bg-[#147a9c] text-white">
               <th className="px-4 py-4 w-[44%]" />
               <th className="px-4 py-4 text-center font-bold text-[16px] border-l border-white/40">
                 Credit Achieved
@@ -26,7 +26,7 @@ export default function SemesterAchievement() {
           </thead>
           <tbody>
             <tr className="bg-white">
-              <td className="px-5 py-5 text-[#1a1a1a] bg-[#e6e8eb] font-medium border-r-[3px] border-[#1c8db0]">
+              <td className="px-5 py-5 text-[#1a1a1a] bg-[#e6e8eb] font-medium border-r-[3px] border-[#147a9c]">
                 Semester Achievement
               </td>
               <td className="px-5 py-5 text-center text-[#1a1a1a]">
@@ -37,7 +37,7 @@ export default function SemesterAchievement() {
               </td>
             </tr>
             <tr className="bg-[#eef0f2]">
-              <td className="px-5 py-5 text-[#1a1a1a] bg-[#c8ced3] font-medium border-r-[3px] border-[#1c8db0]">
+              <td className="px-5 py-5 text-[#1a1a1a] bg-[#c8ced3] font-medium border-r-[3px] border-[#147a9c]">
                 Total Achievement
               </td>
               <td className="px-5 py-5 text-center text-[#1a1a1a]">
