@@ -3,8 +3,7 @@ import { student, sidebarServices } from '../data/mockData'
 import { useSemester } from '../context/SemesterContext'
 import { HomeIcon, ServiceIcon } from './icons'
 
-const campusBg =
-  "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 280'><defs><linearGradient id='sky' x1='0' x2='0' y1='0' y2='1'><stop offset='0' stop-color='%2386c5d8'/><stop offset='1' stop-color='%23e0eef3'/></linearGradient><linearGradient id='blg' x1='0' x2='0' y1='0' y2='1'><stop offset='0' stop-color='%23b09a7b'/><stop offset='1' stop-color='%237a6957'/></linearGradient><linearGradient id='palm' x1='0' x2='0' y1='0' y2='1'><stop offset='0' stop-color='%231f7340'/><stop offset='1' stop-color='%23155028'/></linearGradient></defs><rect width='600' height='280' fill='url(%23sky)'/><text x='300' y='38' fill='%23ffffff' font-family='serif' font-size='16' text-anchor='middle' opacity='0.55'>الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري</text><text x='300' y='62' fill='%23ffffff' font-family='serif' font-size='11' text-anchor='middle' opacity='0.55'>Arab Academy for Science, Technology %26 Maritime Transport</text><rect x='40' y='150' width='160' height='110' fill='url(%23blg)'/><polygon points='40,150 120,110 200,150' fill='%238d7a60'/><rect x='220' y='130' width='200' height='130' fill='%23a08c6f'/><rect x='440' y='160' width='130' height='100' fill='%2398856a'/><g fill='%23d9c89e'><rect x='60' y='170' width='12' height='14'/><rect x='80' y='170' width='12' height='14'/><rect x='100' y='170' width='12' height='14'/><rect x='120' y='170' width='12' height='14'/><rect x='140' y='170' width='12' height='14'/><rect x='160' y='170' width='12' height='14'/><rect x='240' y='150' width='14' height='16'/><rect x='265' y='150' width='14' height='16'/><rect x='290' y='150' width='14' height='16'/><rect x='315' y='150' width='14' height='16'/><rect x='340' y='150' width='14' height='16'/><rect x='365' y='150' width='14' height='16'/><rect x='390' y='150' width='14' height='16'/><rect x='240' y='180' width='14' height='16'/><rect x='265' y='180' width='14' height='16'/><rect x='290' y='180' width='14' height='16'/><rect x='315' y='180' width='14' height='16'/><rect x='340' y='180' width='14' height='16'/><rect x='365' y='180' width='14' height='16'/><rect x='390' y='180' width='14' height='16'/><rect x='460' y='180' width='12' height='14'/><rect x='480' y='180' width='12' height='14'/><rect x='500' y='180' width='12' height='14'/><rect x='520' y='180' width='12' height='14'/><rect x='540' y='180' width='12' height='14'/></g><g fill='url(%23palm)'><ellipse cx='15' cy='260' rx='80' ry='30'/><ellipse cx='585' cy='260' rx='80' ry='30'/></g></svg>\")"
+const campusBg = "url('/sidebar-banner.jpg')"
 
 const dotClassByColor = {
   green: 'border-[#7cc24d] bg-transparent',
@@ -40,16 +39,16 @@ export default function Sidebar({ onNavigate }) {
   return (
     <aside className="w-[290px] shrink-0 bg-white border-r border-portal-borderLight h-[calc(100vh-63px)] overflow-y-auto portal-scroll shadow-sidebar">
       <div
-        className="relative h-[150px] bg-cover bg-center text-white"
+        className="relative h-[170px] bg-cover bg-center text-white"
         style={{ backgroundImage: campusBg }}
       >
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="relative h-full flex flex-col justify-between p-3">
-          <div className="flex items-start gap-2">
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="relative h-full flex flex-col justify-end p-3">
+          <div className="flex items-end gap-2 mb-1">
             <img
               src={student.avatar}
               alt={student.name}
-              className="w-[42px] h-[42px] rounded-full ring-2 ring-white object-cover shrink-0"
+              className="w-[44px] h-[44px] rounded-full ring-2 ring-white object-cover shrink-0"
             />
           </div>
           <div className="leading-tight pl-1">
