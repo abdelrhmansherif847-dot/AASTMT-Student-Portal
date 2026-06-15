@@ -107,10 +107,10 @@ const sep2024Results = [
 ]
 
 const feb2025Results = [
-  { code: 'EBA1104', name: 'Physics II',                                  attendance: '17',  week7: '16.00', week12: '14.00', semesterWork: '10.00', finalGrade: 'C+' },
-  { code: 'EBA1204', name: 'Calculus II',                                 attendance: '29',  week7: '20.00', week12: '16.00', semesterWork: '10.00', finalGrade: 'B'  },
+  { code: 'EBA1104', name: 'Physics Ii',                                  attendance: '17',  week7: '16.00', week12: '14.00', semesterWork: '10.00', finalGrade: 'C+' },
+  { code: 'EBA1204', name: 'Calculus Ii',                                 attendance: '29',  week7: '20.00', week12: '16.00', semesterWork: '10.00', finalGrade: 'B'  },
   { code: 'EBA1402', name: 'Dynamics',                                    attendance: '6.7', week7: '24.00', week12: '17.00', semesterWork: '10.00', finalGrade: 'B+' },
-  { code: 'ECE1101', name: 'Programming Fundamentals & Problem Solving',  attendance: '3.3', week7: '21.50', week12: '15.50', semesterWork: '8.00',  finalGrade: 'C+' },
+  { code: 'ECE1101', name: 'Programming Fundamentals&Problem Solving',    attendance: '3.3', week7: '21.50', week12: '15.50', semesterWork: '8.00',  finalGrade: 'C+' },
   { code: 'EME1501', name: 'Engineering Drawing & Projection',            attendance: '6.7', week7: '22.00', week12: '18.00', semesterWork: '10.00', finalGrade: 'B'  },
   { code: 'UNR2101', name: 'Communication And Presentation Skills',       attendance: '10',  week7: '28.50', week12: '15.00', semesterWork: '10.00', finalGrade: 'B+' },
   { code: 'UNR1407', name: 'Academic Writing',                            attendance: '10',  week7: '23.00', week12: '16.00', semesterWork: '8.50',  finalGrade: 'C+' },
@@ -122,7 +122,7 @@ const sep2025Results = [
   { code: 'ECB2401', name: 'Structural Analysis 1',                   attendance: '4.4', week7: '19.50', week12: '14.50', semesterWork: '10.00', finalGrade: 'B-' },
   { code: 'UNR4304', name: 'Introduction To Leadership',              attendance: '20',  week7: '30.00', week12: '20.00', semesterWork: '9.00',  finalGrade: 'A+' },
   { code: 'ECB2101', name: 'Introduction To Construction Management', attendance: '4.4', week7: '20.00', week12: '13.50', semesterWork: '10.00', finalGrade: 'B-' },
-  { code: 'EEE2308', name: 'Electrical Engineering Fundamentals',     attendance: '20',  week7: '23.00', week12: '15.00', semesterWork: '10.00', finalGrade: 'B+' },
+  { code: 'EEE2308', name: 'Electrical Engineering Fundementals',     attendance: '20',  week7: '23.00', week12: '15.00', semesterWork: '10.00', finalGrade: 'B+' },
   { code: 'ECB2501', name: 'Material Science & Properties',           attendance: '3.3', week7: '17.00', week12: '17.00', semesterWork: '8.00',  finalGrade: 'B-' },
 ]
 
@@ -131,8 +131,8 @@ const feb2026Results = [
   { code: 'ECB2801', name: 'Hydraulics Fundamentals',                     attendance: '11',  week7: '29.00', week12: '19.00', semesterWork: '7.00',  finalGrade: 'F'  },
   { code: 'ECB2402', name: 'Strength Of Materials',                       attendance: '8.9', week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
   { code: 'EEE2404', name: 'Electrical Installations In Buildings',       attendance: '10',  week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
-  { code: 'ECB2102', name: 'Introduction To Systems Analysis And Design', attendance: '13',  week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
-  { code: 'ECB2702', name: 'Introduction To Transportation Engineering',  attendance: '13',  week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
+  { code: 'ECB2102', name: 'Introduction To Systems Analysis And Dec',    attendance: '13',  week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
+  { code: 'ECB2702', name: 'Introduction To Transportation Engineeri',    attendance: '13',  week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
   { code: 'EBA2202', name: 'Vector And Complex Analysis',                 attendance: '3.3', week7: '29.00', week12: '18.00', semesterWork: '8.00',  finalGrade: 'A'  },
 ]
 
