@@ -10,9 +10,9 @@ body,
 
 body {
   margin: 0;
-  background: #ffffff;
-  color: #2b2b2b;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, system-ui, sans-serif;
+  background: #dce2e8;
+  color: #222222;
+  font-family: 'Segoe UI', Tahoma, Arial, Helvetica, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
@@ -32,13 +32,13 @@ body {
   background: #94a3b8;
 }
 
-/* The thin progress-style bar under the navbar in screenshots */
+/* Thin progress strip under the navbar */
 .navbar-progress {
   height: 3px;
   background: linear-gradient(
     to right,
-    #2596be 0%,
-    #2596be 35%,
+    #0095c8 0%,
+    #0095c8 35%,
     #e6f1f5 35%,
     #e6f1f5 100%
   );

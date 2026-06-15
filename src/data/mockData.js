@@ -4,7 +4,7 @@ export const student = {
   email: 'abdelrahman.sherif@aast.edu',
   college: 'College of Engineering and Technology',
   major: 'Construction & Building Engineering',
-  avatar: '/avatar.svg',
+  avatar: '/profile.jpg',
 }
 
 export const credentials = {
@@ -15,12 +15,86 @@ export const credentials = {
 const passedFromGrade = (grade) =>
   grade && grade !== 'F' && grade !== 'U' && grade !== 'I'
 
+export const gradeColor = (grade) => {
+  if (!grade) return 'gray'
+  const g = grade.toUpperCase()
+  if (g === 'F' || g === 'D' || g === 'D-' || g === 'D+' || g === 'C-')
+    return 'red'
+  if (g === 'A+' || g === 'A' || g === 'A-' || g === 'B+') return 'green'
+  if (g === 'B' || g === 'B-' || g === 'C+' || g === 'C') return 'yellow'
+  return 'gray'
+}
+
 const buildCourses = (results) =>
   results.map((r) => ({
     code: r.code,
     name: r.name,
     passed: passedFromGrade(r.finalGrade),
+    color: gradeColor(r.finalGrade),
   }))
+
+export const notifications = [
+  {
+    id: 'n1',
+    title: 'Final Exam Time/Date',
+    body: 'ECB2202 Building Construction',
+    time: '2h ago',
+  },
+  {
+    id: 'n2',
+    title: 'Final Exam Time/Date',
+    body: 'ECB2402 Strength Of Materials',
+    time: '4h ago',
+  },
+  {
+    id: 'n3',
+    title: 'Final Exam Time/Date',
+    body: 'ECB2801 Hydraulics Fundamentals',
+    time: '5h ago',
+  },
+  {
+    id: 'n4',
+    title: 'Final Exam Time/Date',
+    body: 'EBA2202 Vector And Complex Analysis',
+    time: '1d ago',
+  },
+  {
+    id: 'n5',
+    title: 'Final Exam Time/Date',
+    body: 'EEE2404 Electrical Installations In Buildings',
+    time: '2d ago',
+  },
+]
+
+export const dashboardCards = [
+  { id: 'student-results', label: 'Student Results', path: '/results', image: 'graduation' },
+  { id: 'student-schedule', label: 'Student Schedule', image: 'calendar' },
+  { id: 'unofficial-transcript', label: 'Unofficial Transcript', image: 'transcript' },
+  { id: 'clinic-reservation', label: 'Clinic Reservation', image: 'medical' },
+  { id: 'student-training', label: 'Student Training', image: 'graduation' },
+  { id: 'old-moodle', label: 'Old Moodle', image: 'moodle' },
+  { id: 'new-moodle', label: 'New Moodle', image: 'moodle' },
+  { id: 'submitted-portfolio', label: 'حافظة مقدم', image: 'books', rtl: true },
+  { id: 'student-appeal', label: 'Student Appeal', image: 'note' },
+  { id: 'support', label: 'Support and inquiries', image: 'support' },
+  { id: 'invoices', label: 'Invoices', image: 'tuition' },
+  { id: 'e-payment', label: 'E-Payment', image: 'card' },
+  { id: 'questionnaire', label: 'Questionnaire', image: 'sticky' },
+  { id: 'minor-study', label: 'Minor Study', image: 'book' },
+  { id: 'college-schedules', label: 'College Schedules', image: 'calendar' },
+  { id: 'exam-schedule', label: 'Exam schedule', image: 'calendar' },
+  { id: 'open-access', label: 'Open Access', image: 'access' },
+  { id: 'mail-activation', label: 'Mail Activation', image: 'mail' },
+  { id: 'student-update-data', label: 'Student Update Data', image: 'update' },
+  { id: 'student-bank-account', label: 'Student Bank Account', image: 'bank' },
+  { id: 'open-free-bank-account', label: 'Open free bank Account', image: 'qnb' },
+  { id: 'statistics', label: 'Statistics', image: 'chart' },
+  { id: 'final-exam-excuse', label: 'Final exam excuse', image: 'road' },
+  { id: 'aast-card-request', label: 'AAST Card Request', image: 'card' },
+  { id: 'protect-data', label: 'احمي بياناتك : البريد الإلكتروني', image: 'lock', rtl: true },
+  { id: 'student-council-voting', label: 'Student Council Voting', image: 'vote' },
+  { id: 'student-supplies', label: 'Student Supplies', image: 'supplies' },
+]
 
 const sep2024Results = [
   { code: 'EBA1103', name: 'Physics I',                  attendance: '5',   week7: '29.00', week12: '19.00', semesterWork: '9.00',  finalGrade: 'B+' },

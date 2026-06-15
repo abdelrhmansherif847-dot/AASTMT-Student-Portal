@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import StudentResults from './pages/StudentResults'
 import Home from './pages/Home'
 import ComingSoon from './components/ComingSoon'
+import CourseDetail from './pages/CourseDetail'
 import { SemesterProvider } from './context/SemesterContext'
 
 const AUTH_KEY = 'aastmt_portal_authed'
@@ -63,6 +64,16 @@ export default function App() {
           <ProtectedRoute authed={authed}>
             <DashboardLayout onLogout={handleLogout}>
               <StudentResults />
+            </DashboardLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/courses/:code"
+        element={
+          <ProtectedRoute authed={authed}>
+            <DashboardLayout onLogout={handleLogout}>
+              <CourseDetail />
             </DashboardLayout>
           </ProtectedRoute>
         }

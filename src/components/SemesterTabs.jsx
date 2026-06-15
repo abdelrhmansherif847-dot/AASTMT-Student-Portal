@@ -13,8 +13,8 @@ export default function SemesterTabs() {
           dir="rtl"
           className={`px-7 py-2 rounded text-[14px] font-medium transition-colors min-w-[110px] text-center ${
             selectedId === s.id
-              ? 'bg-[#3f4347] text-white'
-              : 'bg-[#9aa0a6] text-white hover:bg-[#7e848a]'
+              ? 'bg-portal-tabSelected text-white shadow-sm'
+              : 'bg-portal-tabInactive text-white hover:bg-[#5a5e64]'
           }`}
         >
           {s.label}
