@@ -39,24 +39,25 @@ export default function Sidebar({ onNavigate }) {
   return (
     <aside className="w-[290px] shrink-0 bg-white border-r border-portal-borderLight h-[calc(100vh-63px)] overflow-y-auto portal-scroll shadow-sidebar">
       <div
-        className="relative h-[210px] bg-cover bg-center text-white"
+        className="relative h-[200px] bg-cover bg-center text-white overflow-hidden"
         style={{ backgroundImage: campusBg }}
       >
-        {/* Soft bottom gradient so the student name stays readable */}
-        <div className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-        <div className="relative h-full flex flex-col justify-end p-3">
+        {/* Heavy dark overlay so the campus image is only faintly visible,
+            matching the real portal where everything is on a dark navy band. */}
+        <div className="absolute inset-0 bg-[#0e1b2c]/75" />
+        <div className="relative h-full flex flex-col justify-end p-3 gap-2">
           <img
             src={student.avatar}
             alt={student.name}
-            className="w-[64px] h-[64px] rounded-full ring-2 ring-white object-cover shrink-0 mb-2"
+            className="w-[48px] h-[48px] rounded-full ring-2 ring-white object-cover shrink-0"
           />
-          <div className="leading-tight pl-0.5">
-            <div className="font-bold text-[16px] drop-shadow-lg leading-snug">
+          <div className="leading-tight">
+            <div className="font-bold text-[16px] leading-snug">
               {student.name.split(' ').slice(0, 4).join(' ')}
               <br />
               {student.name.split(' ').slice(4).join(' ')}
             </div>
-            <div className="text-[13px] text-white/90 mt-1.5 drop-shadow">
+            <div className="text-[13px] text-white/85 mt-1.5">
               {student.registrationNumber}
             </div>
           </div>
