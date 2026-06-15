@@ -44,7 +44,7 @@ export default function SemesterAchievement() {
                 {total.credit.toFixed(1)}
               </td>
               <td className="px-2 py-1.5 text-center">
-                <span className="inline-block bg-[#f2a100] text-[#1a1a1a] font-bold rounded px-3 py-1 min-w-[60px] text-[14px]">
+                <span className="inline-block bg-[#f2a100] text-[#1a1a1a] font-bold rounded px-4 py-1.5 min-w-[72px] text-[19px]">
                   {total.gpa.toFixed(2)}
                 </span>
               </td>
