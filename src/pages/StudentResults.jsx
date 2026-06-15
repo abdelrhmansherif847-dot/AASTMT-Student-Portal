@@ -7,7 +7,7 @@ export default function StudentResults() {
     <div className="px-6 lg:px-8 py-6 space-y-5">
       {/* Title */}
       <section>
-        <h1 className="text-[26px] font-semibold text-[#1e1e1e] leading-tight">
+        <h1 className="text-[28px] font-bold text-[#1a1a1a] leading-tight">
           Student Results
         </h1>
         <p className="text-[14px] text-[#6b7280] mt-1">
@@ -17,7 +17,7 @@ export default function StudentResults() {
 
       {/* Semesters */}
       <section>
-        <h2 className="text-[22px] font-semibold text-[#1e1e1e] leading-tight">
+        <h2 className="text-[24px] font-bold text-[#1a1a1a] leading-tight">
           Semesters
         </h2>
         <p className="text-[13px] text-[#9aa0a6] mt-1">
@@ -30,7 +30,7 @@ export default function StudentResults() {
 
       {/* Semester Results */}
       <section>
-        <h2 className="text-[22px] font-semibold text-[#1e1e1e] mb-3">
+        <h2 className="text-[26px] font-bold text-[#1a1a1a] mb-3">
           Semester Results
         </h2>
         <ResultsTable />
