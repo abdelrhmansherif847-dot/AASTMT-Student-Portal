@@ -38,34 +38,32 @@ export default function Sidebar({ onNavigate }) {
 
   return (
     <aside className="w-[290px] shrink-0 bg-white border-r border-portal-borderLight h-[calc(100vh-63px)] overflow-y-auto portal-scroll shadow-sidebar">
-      <div className="relative h-[200px] text-white overflow-hidden">
-        {/* Real campus banner image — full quality, same crop/angle as the
-            reference. Slight navy tint + bottom gradient match the real
-            portal without hiding the building. */}
+      <div className="relative h-[260px] text-white overflow-hidden">
+        {/* Real campus banner image at full quality */}
         <img
           src="/sidebar-banner.jpg"
           alt="AASTMT"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#0b1d33]/35" />
-        <div className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-black/70 to-transparent" />
-        <div className="relative h-full flex flex-col justify-end p-3 gap-2">
+        {/* Light navy tint over the whole banner */}
+        <div className="absolute inset-0 bg-[#0b1d33]/25" />
+        {/* Stronger gradient over the bottom so the large name reads */}
+        <div className="absolute inset-x-0 bottom-0 h-[65%] bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
+        <div className="relative h-full flex flex-col justify-end p-4 gap-3">
           <img
             src={student.avatar}
             alt={student.name}
-            className="w-[52px] h-[52px] rounded-full ring-2 ring-white object-cover shrink-0"
+            className="w-[56px] h-[56px] rounded-full ring-2 ring-white object-cover shrink-0"
           />
           <div className="leading-tight">
             <div
-              className="font-bold text-[16px] leading-snug"
-              style={{ textShadow: '0 1px 3px rgba(0,0,0,0.9)' }}
+              className="font-bold text-[20px] leading-[1.15]"
+              style={{ textShadow: '0 1px 4px rgba(0,0,0,0.9)' }}
             >
-              {student.name.split(' ').slice(0, 4).join(' ')}
-              <br />
-              {student.name.split(' ').slice(4).join(' ')}
+              {student.name}
             </div>
             <div
-              className="text-[13px] text-white/90 mt-1.5 font-medium"
+              className="text-[14px] text-white/90 mt-2 font-medium"
               style={{ textShadow: '0 1px 2px rgba(0,0,0,0.9)' }}
             >
               {student.registrationNumber}
