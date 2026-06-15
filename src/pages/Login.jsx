@@ -2,9 +2,6 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { credentials } from '../data/mockData'
 
-const campusHeroBg =
-  "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 1000'><defs><linearGradient id='sky' x1='0' x2='0' y1='0' y2='1'><stop offset='0' stop-color='%2386c5d8'/><stop offset='0.6' stop-color='%23cae6f0'/><stop offset='1' stop-color='%23dceae6'/></linearGradient><linearGradient id='ground' x1='0' x2='0' y1='0' y2='1'><stop offset='0' stop-color='%2398a672'/><stop offset='1' stop-color='%23687c4f'/></linearGradient></defs><rect width='800' height='1000' fill='url(%23sky)'/><rect y='600' width='800' height='400' fill='url(%23ground)'/><polygon points='0,580 800,580 800,640 0,640' fill='%23dde2c0' opacity='0.6'/><rect x='80' y='350' width='250' height='250' fill='%23b09a7b'/><rect x='340' y='320' width='160' height='280' fill='%23a08c6f'/><rect x='510' y='370' width='220' height='230' fill='%2398856a'/><g fill='%23d9c89e'><rect x='100' y='380' width='14' height='18'/><rect x='130' y='380' width='14' height='18'/><rect x='160' y='380' width='14' height='18'/><rect x='190' y='380' width='14' height='18'/><rect x='220' y='380' width='14' height='18'/><rect x='250' y='380' width='14' height='18'/><rect x='280' y='380' width='14' height='18'/><rect x='100' y='420' width='14' height='18'/><rect x='130' y='420' width='14' height='18'/><rect x='160' y='420' width='14' height='18'/><rect x='190' y='420' width='14' height='18'/><rect x='220' y='420' width='14' height='18'/><rect x='250' y='420' width='14' height='18'/><rect x='280' y='420' width='14' height='18'/><rect x='100' y='460' width='14' height='18'/><rect x='130' y='460' width='14' height='18'/><rect x='160' y='460' width='14' height='18'/><rect x='190' y='460' width='14' height='18'/><rect x='220' y='460' width='14' height='18'/><rect x='250' y='460' width='14' height='18'/><rect x='280' y='460' width='14' height='18'/><rect x='100' y='500' width='14' height='18'/><rect x='130' y='500' width='14' height='18'/><rect x='160' y='500' width='14' height='18'/><rect x='190' y='500' width='14' height='18'/><rect x='220' y='500' width='14' height='18'/><rect x='250' y='500' width='14' height='18'/><rect x='280' y='500' width='14' height='18'/><rect x='100' y='540' width='14' height='18'/><rect x='130' y='540' width='14' height='18'/><rect x='160' y='540' width='14' height='18'/><rect x='190' y='540' width='14' height='18'/><rect x='220' y='540' width='14' height='18'/><rect x='250' y='540' width='14' height='18'/><rect x='280' y='540' width='14' height='18'/></g><g fill='%231f5028'><ellipse cx='30' cy='600' rx='40' ry='80'/><ellipse cx='770' cy='600' rx='40' ry='80'/><circle cx='30' cy='480' r='40'/><circle cx='770' cy='480' r='40'/></g></svg>\")"
-
 export default function Login({ onLogin }) {
   const navigate = useNavigate()
   const [registration, setRegistration] = useState('')
@@ -29,21 +26,23 @@ export default function Login({ onLogin }) {
 
   return (
     <div className="min-h-screen bg-white flex flex-col lg:flex-row">
-      {/* Left hero panel */}
-      <div
-        className="relative hidden lg:block lg:w-[55%] bg-cover bg-center"
-        style={{ backgroundImage: campusHeroBg }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/60" />
+      {/* Left hero panel — real AASTMT campus photo */}
+      <div className="relative hidden lg:block lg:w-[55%]">
+        <img
+          src="/campus.jpg"
+          alt="AASTMT Campus"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70" />
         <div className="absolute bottom-10 left-10 right-10 text-white">
           <h1 className="text-[36px] font-bold drop-shadow-lg">
-            AASTMT Student Portal
+            AASTMT <span className="font-light">Student Portal</span>
           </h1>
           <p className="mt-3 text-[14px] max-w-[480px] text-white/90 leading-relaxed">
-            AASTMT Student Portal is a gateway where students can log in
-            to access their academic program information, Student Portal
-            contains information on courses, transcripts, timetables, exam
-            schedules and department contact numbers.
+            AASTMT Student Portal is an online gateway where students can log in
+            to access important program information. Student Portal contains
+            information on courses, transcripts, timetables, exam schedules and
+            department contact numbers.
           </p>
         </div>
       </div>
@@ -52,7 +51,7 @@ export default function Login({ onLogin }) {
       <div className="flex-1 flex items-center justify-center px-4 py-8">
         <div className="w-full max-w-[420px]">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <img src="/logo.svg" alt="AASTMT" className="w-[62px] h-[62px]" />
+            <img src="/aast-logo.png" alt="AASTMT" className="h-[72px] w-auto object-contain" />
             <div className="leading-none">
               <span className="text-[34px] tracking-tight font-bold text-[#1e1e1e]">
                 Student

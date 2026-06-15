@@ -85,7 +85,7 @@ export default function Navbar({ onLogout }) {
           className="flex items-center gap-2.5"
           title="Home"
         >
-          <img src="/logo.svg" alt="AASTMT" className="w-[42px] h-[42px]" />
+          <img src="/aast-logo.png" alt="AASTMT" className="h-[44px] w-auto object-contain" />
           <div className="leading-none">
             <span className="text-[24px] tracking-tight font-bold text-[#1e1e1e]">
               Student

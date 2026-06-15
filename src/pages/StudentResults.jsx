@@ -37,7 +37,7 @@ export default function StudentResults() {
       </section>
 
       {/* Semester Achievement (note: original spells it "Semster") */}
-      <section className="flex justify-end pt-2">
+      <section className="flex justify-center pt-2">
         <SemesterAchievement />
       </section>
     </div>
