@@ -1,7 +1,9 @@
-import { semesterAchievement } from '../data/mockData'
+import { useSemester } from '../context/SemesterContext'
 
 export default function SemesterAchievement() {
-  const { semester, total } = semesterAchievement
+  const { achievement } = useSemester()
+  const { semester, total } = achievement
+
   return (
     <div className="bg-white border border-portal-borderSoft rounded shadow-card w-full max-w-[520px]">
       <div className="px-5 py-4">
