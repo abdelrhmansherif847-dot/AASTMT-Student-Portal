@@ -10,20 +10,22 @@ const columns = [
   { key: 'finalGrade', label: 'Final Grade', finalCol: true, align: 'center' },
 ]
 
+const TEAL = '#1c8db0'
+
 export default function ResultsTable() {
   const { results: semesterResults } = useSemester()
   return (
     <div className="bg-white overflow-hidden rounded shadow-card border border-portal-borderLight">
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse text-[15px]">
+        <table className="w-full border-collapse text-[14px]">
           <thead>
             <tr className="bg-[#1c8db0] text-white">
               {columns.map((c, i) => (
                 <th
                   key={c.key}
-                  className={`px-4 py-4 font-bold align-middle ${
+                  className={`px-3 py-3 font-bold align-middle ${
                     c.align === 'left' ? 'text-left' : 'text-center'
-                  } ${i < columns.length - 1 ? 'border-r border-white/30' : ''}`}
+                  } ${i < columns.length - 1 ? 'border-r border-white/40' : ''}`}
                 >
                   {c.finalCol ? (
                     <span className="block leading-tight">
@@ -51,31 +53,48 @@ export default function ResultsTable() {
               const stripe = idx % 2 === 1
               const rowBg = stripe ? 'bg-[#eef0f2]' : 'bg-white'
               const codeBg = stripe ? 'bg-[#c8ced3]' : 'bg-[#dadde1]'
-              const cellBorder =
-                'border-b border-[#c7ced6] border-r border-[#c7ced6]'
+              const cellBase = 'px-3 py-3 text-[#1a1a1a]'
               return (
                 <tr key={row.code} className={rowBg}>
                   <td
-                    className={`${codeBg} px-5 py-5 font-bold text-[#1a1a1a] text-[15px] text-left whitespace-nowrap ${cellBorder}`}
+                    className={`${codeBg} ${cellBase} font-bold text-[14px] text-left whitespace-nowrap`}
+                    style={{ borderRight: `2px solid ${TEAL}` }}
                   >
                     {row.code}
                   </td>
-                  <td className={`px-5 py-5 text-[#1a1a1a] text-[16px] font-normal text-left ${cellBorder}`}>
+                  <td
+                    className={`${cellBase} text-[14px] text-left`}
+                    style={{ borderRight: `2px solid ${TEAL}` }}
+                  >
                     {row.name}
                   </td>
-                  <td className={`px-5 py-5 text-[#1a1a1a] text-[16px] text-center ${cellBorder}`}>
+                  <td
+                    className={`${cellBase} text-[14px] text-center`}
+                    style={{ borderRight: `2px solid ${TEAL}` }}
+                  >
                     {row.attendance}
                   </td>
-                  <td className={`px-5 py-5 text-[#1a1a1a] text-[16px] text-center ${cellBorder}`}>
+                  <td
+                    className={`${cellBase} text-[14px] text-center`}
+                    style={{ borderRight: `2px solid ${TEAL}` }}
+                  >
                     {row.week7}
                   </td>
-                  <td className={`px-5 py-5 text-[#1a1a1a] text-[16px] text-center ${cellBorder}`}>
+                  <td
+                    className={`${cellBase} text-[14px] text-center`}
+                    style={{ borderRight: `2px solid ${TEAL}` }}
+                  >
                     {row.week12}
                   </td>
-                  <td className={`px-5 py-5 text-[#1a1a1a] text-[16px] text-center ${cellBorder}`}>
+                  <td
+                    className={`${cellBase} text-[14px] text-center`}
+                    style={{ borderRight: `2px solid ${TEAL}` }}
+                  >
                     {row.semesterWork}
                   </td>
-                  <td className="px-5 py-5 text-center font-bold text-[22px] text-[#1a1a1a] border-b border-[#c7ced6] border-l-[3px] border-l-[#1c8db0]">
+                  <td
+                    className="px-3 py-3 text-center font-bold text-[19px] text-[#1a1a1a]"
+                  >
                     {row.finalGrade}
                   </td>
                 </tr>
