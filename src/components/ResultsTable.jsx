@@ -62,38 +62,24 @@ export default function ResultsTable() {
                   >
                     {row.code}
                   </td>
-                  <td
-                    className={`${cellBase} text-[14px] text-left`}
-                    style={{ borderRight: `2px solid ${TEAL}` }}
-                  >
+                  <td className={`${cellBase} text-[14px] text-left`}>
                     {row.name}
                   </td>
-                  <td
-                    className={`${cellBase} text-[14px] text-center`}
-                    style={{ borderRight: `2px solid ${TEAL}` }}
-                  >
+                  <td className={`${cellBase} text-[14px] text-center`}>
                     {row.attendance}
                   </td>
-                  <td
-                    className={`${cellBase} text-[14px] text-center`}
-                    style={{ borderRight: `2px solid ${TEAL}` }}
-                  >
+                  <td className={`${cellBase} text-[14px] text-center`}>
                     {row.week7}
                   </td>
-                  <td
-                    className={`${cellBase} text-[14px] text-center`}
-                    style={{ borderRight: `2px solid ${TEAL}` }}
-                  >
+                  <td className={`${cellBase} text-[14px] text-center`}>
                     {row.week12}
                   </td>
-                  <td
-                    className={`${cellBase} text-[14px] text-center`}
-                    style={{ borderRight: `2px solid ${TEAL}` }}
-                  >
+                  <td className={`${cellBase} text-[14px] text-center`}>
                     {row.semesterWork}
                   </td>
                   <td
                     className="px-3 py-3 text-center font-bold text-[19px] text-[#1a1a1a]"
+                    style={{ borderLeft: `2px solid ${TEAL}` }}
                   >
                     {row.finalGrade}
                   </td>
