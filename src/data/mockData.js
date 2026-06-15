@@ -74,24 +74,24 @@ export const semesterData = {
     results: sep2024Results,
     courses: buildCourses(sep2024Results),
     achievement: {
-      semester: { credit: 0.0, gpa: 0.0 },
-      total: { credit: 0.0, gpa: 0.0 },
+      semester: { credit: 18.0, gpa: 2.8 },
+      total: { credit: 69.0, gpa: 3.1 },
     },
   },
   'feb-2025': {
     results: feb2025Results,
     courses: buildCourses(feb2025Results),
     achievement: {
-      semester: { credit: 0.0, gpa: 0.0 },
-      total: { credit: 0.0, gpa: 0.0 },
+      semester: { credit: 18.0, gpa: 2.6 },
+      total: { credit: 69.0, gpa: 3.1 },
     },
   },
   'sep-2025': {
     results: sep2025Results,
     courses: buildCourses(sep2025Results),
     achievement: {
-      semester: { credit: 0.0, gpa: 0.0 },
-      total: { credit: 54.0, gpa: 2.9 },
+      semester: { credit: 18.0, gpa: 2.9 },
+      total: { credit: 69.0, gpa: 3.1 },
     },
   },
   'feb-2026': {
