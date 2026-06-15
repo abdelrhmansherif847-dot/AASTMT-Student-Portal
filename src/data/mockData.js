@@ -117,13 +117,13 @@ const feb2025Results = [
 ]
 
 const sep2025Results = [
-  { code: 'EBA2201', name: 'Differential Equations',                  attendance: '', week7: '29.00', week12: '15.00', semesterWork: '10.00', finalGrade: 'B+' },
-  { code: 'ECB2701', name: 'Construction Surveying 1',                attendance: '', week7: '23.50', week12: '14.50', semesterWork: '9.00',  finalGrade: 'B-' },
-  { code: 'ECB2401', name: 'Structural Analysis 1',                   attendance: '', week7: '19.50', week12: '14.50', semesterWork: '10.00', finalGrade: 'B-' },
-  { code: 'UNR4304', name: 'Introduction To Leadership',              attendance: '', week7: '30.00', week12: '20.00', semesterWork: '9.00',  finalGrade: 'A+' },
-  { code: 'ECB2101', name: 'Introduction To Construction Management', attendance: '', week7: '20.00', week12: '13.50', semesterWork: '10.00', finalGrade: 'B-' },
-  { code: 'EEE2308', name: 'Electrical Engineering Fundamentals',     attendance: '', week7: '23.00', week12: '15.00', semesterWork: '10.00', finalGrade: 'B+' },
-  { code: 'ECB2501', name: 'Material Science & Properties',           attendance: '', week7: '17.00', week12: '17.00', semesterWork: '8.00',  finalGrade: 'B-' },
+  { code: 'EBA2201', name: 'Differential Equations',                  attendance: '6.7', week7: '29.00', week12: '15.00', semesterWork: '10.00', finalGrade: 'B+' },
+  { code: 'ECB2701', name: 'Construction Surveying 1',                attendance: '4.4', week7: '23.50', week12: '14.50', semesterWork: '9.00',  finalGrade: 'B-' },
+  { code: 'ECB2401', name: 'Structural Analysis 1',                   attendance: '4.4', week7: '19.50', week12: '14.50', semesterWork: '10.00', finalGrade: 'B-' },
+  { code: 'UNR4304', name: 'Introduction To Leadership',              attendance: '20',  week7: '30.00', week12: '20.00', semesterWork: '9.00',  finalGrade: 'A+' },
+  { code: 'ECB2101', name: 'Introduction To Construction Management', attendance: '4.4', week7: '20.00', week12: '13.50', semesterWork: '10.00', finalGrade: 'B-' },
+  { code: 'EEE2308', name: 'Electrical Engineering Fundamentals',     attendance: '20',  week7: '23.00', week12: '15.00', semesterWork: '10.00', finalGrade: 'B+' },
+  { code: 'ECB2501', name: 'Material Science & Properties',           attendance: '3.3', week7: '17.00', week12: '17.00', semesterWork: '8.00',  finalGrade: 'B-' },
 ]
 
 const feb2026Results = [
@@ -137,10 +137,10 @@ const feb2026Results = [
 ]
 
 export const semesters = [
-  { id: 'feb-2026', label: 'فبراير 2026' },
-  { id: 'sep-2025', label: 'سبتمبر 2025' },
-  { id: 'feb-2025', label: 'فبراير 2025' },
   { id: 'sep-2024', label: 'سبتمبر 2024' },
+  { id: 'feb-2025', label: 'فبراير 2025' },
+  { id: 'sep-2025', label: 'سبتمبر 2025' },
+  { id: 'feb-2026', label: 'فبراير 2026' },
 ]
 
 export const semesterData = {
