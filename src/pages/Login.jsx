@@ -25,9 +25,9 @@ export default function Login({ onLogin }) {
   }
 
   return (
-    <div className="min-h-screen bg-white flex flex-col lg:flex-row">
-      {/* Left hero panel — real AASTMT campus photo */}
-      <div className="relative hidden lg:block lg:w-[55%]">
+    <div className="min-h-screen lg:h-screen bg-white flex flex-col lg:flex-row lg:overflow-hidden">
+      {/* Left hero panel — real AASTMT campus photo, fills the full height */}
+      <div className="relative hidden lg:block lg:w-[55%] lg:h-screen">
         <img
           src="/campus.jpg"
           alt="AASTMT Campus"
@@ -40,7 +40,7 @@ export default function Login({ onLogin }) {
           </h1>
           <p className="mt-3 text-[14px] max-w-[480px] text-white/90 leading-relaxed">
             AASTMT Student Portal is an online gateway where students can log in
-            to access important program information. Student Portal contains
+            to access important program information. Student Portal contain
             information on courses, transcripts, timetables, exam schedules and
             department contact numbers.
           </p>
@@ -48,7 +48,7 @@ export default function Login({ onLogin }) {
       </div>
 
       {/* Right login form */}
-      <div className="flex-1 flex items-center justify-center px-4 py-8">
+      <div className="flex-1 flex items-center justify-center px-4 py-8 lg:h-screen lg:overflow-y-auto">
         <div className="w-full max-w-[420px]">
           <div className="flex items-center justify-center gap-3 mb-6">
             <img src="/aast-logo.png" alt="AASTMT" className="h-[72px] w-auto object-contain" />
@@ -190,10 +190,8 @@ export default function Login({ onLogin }) {
               to send your password.
             </p>
 
-            <p className="text-[11px] text-center text-portal-textLight pt-3 border-t border-portal-borderLight mt-4">
-              Demo credentials — Registration:{' '}
-              <span className="font-mono text-[#3b3b3b]">{credentials.username}</span> · Pin:{' '}
-              <span className="font-mono text-[#3b3b3b]">{credentials.password}</span>
+            <p className="text-[11px] text-center text-portal-textLight pt-3 mt-4">
+              Copyright © 2019 Information and Documentation Center - AASTMT
             </p>
           </form>
         </div>
