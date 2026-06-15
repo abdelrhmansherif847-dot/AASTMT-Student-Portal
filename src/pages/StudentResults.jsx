@@ -1,50 +1,45 @@
 import ResultsTable from '../components/ResultsTable'
 import SemesterAchievement from '../components/SemesterAchievement'
 import SemesterTabs from '../components/SemesterTabs'
-import { student } from '../data/mockData'
 
 export default function StudentResults() {
   return (
-    <div className="p-5 lg:p-7 space-y-5">
-      <div className="bg-white rounded-md shadow-card border border-portal-border p-5">
-        <h1 className="text-[22px] font-semibold text-gray-800">Student Results</h1>
-        <p className="text-[14px] text-gray-500 mt-1">
+    <div className="px-6 lg:px-8 py-6 space-y-5">
+      {/* Title */}
+      <section>
+        <h1 className="text-[26px] font-semibold text-[#1e1e1e] leading-tight">
+          Student Results
+        </h1>
+        <p className="text-[14px] text-[#6b7280] mt-1">
           View the results and the attendance of the current and previous semesters
         </p>
-        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <InfoCard label="Student Name" value={student.name} />
-          <InfoCard label="Registration Number" value={student.registrationNumber} />
-          <InfoCard label="GPA" value={student.gpa.toFixed(2)} highlight />
-          <InfoCard label="Credits Achieved" value={student.creditsAchieved.toFixed(1)} />
+      </section>
+
+      {/* Semesters */}
+      <section>
+        <h2 className="text-[22px] font-semibold text-[#1e1e1e] leading-tight">
+          Semesters
+        </h2>
+        <p className="text-[13px] text-[#9aa0a6] mt-1">
+          Semesters that the student registered.
+        </p>
+        <div className="mt-4">
+          <SemesterTabs />
         </div>
-      </div>
+      </section>
 
-      <SemesterTabs />
-
-      <div className="bg-white rounded-md shadow-card border border-portal-border p-5">
-        <h2 className="text-[20px] font-semibold text-gray-800 mb-4">Semester Results</h2>
+      {/* Semester Results */}
+      <section>
+        <h2 className="text-[22px] font-semibold text-[#1e1e1e] mb-3">
+          Semester Results
+        </h2>
         <ResultsTable />
-      </div>
+      </section>
 
-      <div className="flex justify-end">
+      {/* Semester Achievement (note: original spells it "Semster") */}
+      <section className="flex justify-end pt-2">
         <SemesterAchievement />
-      </div>
-    </div>
-  )
-}
-
-function InfoCard({ label, value, highlight }) {
-  return (
-    <div className="rounded-md border border-portal-border bg-portal-rowAlt p-3">
-      <div className="text-[12px] uppercase tracking-wide text-gray-500">{label}</div>
-      <div
-        className={`mt-1 text-[15px] font-semibold truncate ${
-          highlight ? 'text-portal-accent' : 'text-gray-800'
-        }`}
-        title={value}
-      >
-        {value}
-      </div>
+      </section>
     </div>
   )
 }

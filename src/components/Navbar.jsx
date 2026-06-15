@@ -17,55 +17,80 @@ export default function Navbar({ onLogout }) {
   }
 
   return (
-    <header className="sticky top-0 z-30 w-full bg-white border-b border-portal-border shadow-sm">
-      <div className="flex items-center h-16 px-4 lg:px-6 gap-6">
-        <div className="flex items-center gap-3 min-w-[230px]">
-          <img src="/logo.svg" alt="AASTMT" className="w-11 h-11" />
-          <div className="leading-tight">
-            <div className="text-[22px] tracking-tight">
-              <span className="font-semibold text-gray-800">Student</span>{' '}
-              <span className="text-gray-500 italic">Portal</span>
-            </div>
+    <header className="sticky top-0 z-30 w-full bg-white">
+      <div className="flex items-center h-[60px] px-4 lg:px-6 gap-5">
+        {/* Logo + Student Portal text */}
+        <div className="flex items-center gap-2.5">
+          <img src="/logo.svg" alt="AASTMT" className="w-[42px] h-[42px]" />
+          <div className="leading-none">
+            <span className="text-[24px] tracking-tight font-bold text-[#1e1e1e]">
+              Student
+            </span>{' '}
+            <span className="text-[24px] tracking-tight text-[#8a8d92] font-light italic-serif">
+              Portal
+            </span>
           </div>
         </div>
 
-        <button className="hidden md:flex items-center gap-2 text-portal-link hover:text-portal-headerDark">
-          <NewsIcon className="w-5 h-5" />
+        {/* News */}
+        <button
+          type="button"
+          className="ml-2 hidden md:flex items-center gap-1.5 text-portal-teal hover:opacity-80"
+        >
+          <NewsIcon className="w-[18px] h-[18px]" />
           <span className="text-[15px]">News</span>
         </button>
 
         <div className="flex-1" />
 
-        <button className="hidden md:flex items-center gap-2 text-gray-600 hover:text-portal-link">
-          <GlobeIcon className="w-5 h-5 text-portal-link" />
+        {/* Change Language */}
+        <button
+          type="button"
+          className="hidden md:flex items-center gap-1.5 text-[#5f6368] hover:text-portal-teal"
+        >
+          <GlobeIcon className="w-[18px] h-[18px] text-portal-teal" />
           <span className="text-[15px]">Change Language</span>
           <ChevronDown className="w-3 h-3" />
         </button>
 
-        <button className="hidden md:flex items-center gap-2 text-gray-700 hover:text-portal-link">
-          <FeedbackIcon className="w-5 h-5 text-rose-500" />
+        {/* Feedback */}
+        <button
+          type="button"
+          className="hidden md:flex items-center gap-1.5 text-[#5f6368] hover:text-portal-teal"
+        >
+          <FeedbackIcon className="w-[18px] h-[18px] text-[#ef5350]" />
           <span className="text-[15px]">FeedBack</span>
         </button>
 
-        <div className="flex items-center gap-2 cursor-pointer group" onClick={handleLogout} title="Click to logout">
+        {/* User */}
+        <button
+          type="button"
+          onClick={handleLogout}
+          title="Click to logout"
+          className="flex items-center gap-2 group"
+        >
           <img
             src={student.avatar}
             alt="avatar"
-            className="w-9 h-9 rounded-full ring-2 ring-white object-cover"
+            className="w-[34px] h-[34px] rounded-full object-cover ring-1 ring-gray-200"
           />
-          <span className="hidden lg:inline text-[14.5px] text-gray-800 group-hover:text-portal-link max-w-[260px] truncate">
+          <span className="hidden lg:inline text-[14px] text-[#1e1e1e] group-hover:text-portal-teal max-w-[260px] truncate">
             {student.name}
           </span>
-          <ChevronDown className="w-3 h-3 text-gray-600" />
-        </div>
+          <ChevronDown className="w-3 h-3 text-[#5f6368]" />
+        </button>
 
-        <button className="relative ml-2 text-portal-link hover:text-portal-headerDark">
-          <BellIcon className="w-6 h-6" />
-          <span className="absolute -top-1 -right-1 bg-rose-500 text-white text-[10px] leading-none font-bold rounded-full w-4 h-4 flex items-center justify-center">
+        {/* Bell */}
+        <button type="button" className="relative ml-1 text-portal-teal hover:opacity-80">
+          <BellIcon className="w-[22px] h-[22px]" />
+          <span className="absolute -top-1.5 -right-1.5 bg-[#ef5350] text-white text-[10px] leading-none font-bold rounded-full w-[16px] h-[16px] flex items-center justify-center">
             5
           </span>
         </button>
       </div>
+
+      {/* Thin teal progress strip */}
+      <div className="navbar-progress" />
     </header>
   )
 }

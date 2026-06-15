@@ -1,33 +1,38 @@
 import { semesterResults } from '../data/mockData'
 
 const columns = [
-  { key: 'code', label: 'Course Code', width: 'w-[120px]' },
-  { key: 'name', label: 'Course Name', width: 'min-w-[260px]' },
-  { key: 'attendance', label: 'Attendance', width: 'w-[120px]' },
-  { key: 'week7', label: '7th Week (30%)', width: 'w-[130px]' },
-  { key: 'week12', label: '12th Week (20%)', width: 'w-[130px]' },
-  { key: 'semesterWork', label: 'Semeter Work (10%)', width: 'w-[150px]' },
-  { key: 'finalGrade', label: 'Final Grade', width: 'w-[120px]' },
+  { key: 'code', label: 'Course Code', align: 'left' },
+  { key: 'name', label: 'Course Name', align: 'left' },
+  { key: 'attendance', label: 'Attendance', align: 'center' },
+  { key: 'week7', label: '7th Week', sub: '(30%)', align: 'center' },
+  { key: 'week12', label: '12th Week', sub: '(20%)', align: 'center' },
+  { key: 'semesterWork', label: 'Semeter Work', sub: '(10%)', align: 'center' },
+  { key: 'finalGrade', label: 'Final Grade', twoLine: true, align: 'center' },
 ]
 
 export default function ResultsTable() {
   return (
-    <div className="bg-white rounded-md shadow-card overflow-hidden border border-portal-border">
+    <div className="bg-white overflow-hidden border border-portal-borderSoft rounded">
       <div className="overflow-x-auto">
-        <table className="w-full text-[14px] border-collapse">
+        <table className="w-full border-collapse text-[14px]">
           <thead>
-            <tr className="bg-portal-tableHead text-white">
+            <tr className="bg-portal-teal text-white">
               {columns.map((c, i) => (
                 <th
                   key={c.key}
-                  className={`px-4 py-3 text-center font-semibold align-middle ${c.width} ${
-                    i < columns.length - 1 ? 'border-r border-white/30' : ''
-                  }`}
+                  className={`px-4 py-4 font-semibold align-middle ${
+                    c.align === 'left' ? 'text-left' : 'text-center'
+                  } ${i < columns.length - 1 ? 'border-r border-white/40' : ''}`}
                 >
-                  {c.label.includes('(') ? (
+                  {c.twoLine ? (
                     <span className="block leading-tight">
-                      {c.label.split(' (')[0]}
-                      <br />({c.label.split('(')[1]}
+                      Final<br />Grade
+                    </span>
+                  ) : c.sub ? (
+                    <span className="block leading-tight">
+                      {c.label}
+                      <br />
+                      {c.sub}
                     </span>
                   ) : (
                     c.label
@@ -37,34 +42,37 @@ export default function ResultsTable() {
             </tr>
           </thead>
           <tbody>
-            {semesterResults.map((row, idx) => (
-              <tr
-                key={row.code}
-                className={idx % 2 === 0 ? 'bg-white' : 'bg-portal-rowAlt'}
-              >
-                <td className="px-4 py-4 text-gray-800 font-semibold border-r border-portal-border text-left">
-                  {row.code}
-                </td>
-                <td className="px-4 py-4 text-gray-800 border-r border-portal-border text-left">
-                  {row.name}
-                </td>
-                <td className="px-4 py-4 text-gray-800 text-center border-r border-portal-border">
-                  {row.attendance}
-                </td>
-                <td className="px-4 py-4 text-gray-800 text-center border-r border-portal-border">
-                  {row.week7}
-                </td>
-                <td className="px-4 py-4 text-gray-800 text-center border-r border-portal-border">
-                  {row.week12}
-                </td>
-                <td className="px-4 py-4 text-gray-800 text-center border-r border-portal-border">
-                  {row.semesterWork}
-                </td>
-                <td className="px-4 py-4 text-gray-800 font-bold text-center">
-                  {row.finalGrade}
-                </td>
-              </tr>
-            ))}
+            {semesterResults.map((row, idx) => {
+              const rowBg = idx % 2 === 1 ? 'bg-[#f3f4f6]' : 'bg-white'
+              const codeBg = idx % 2 === 1 ? 'bg-[#d9dcdf]' : 'bg-[#e8eaed]'
+              return (
+                <tr key={row.code} className={rowBg}>
+                  <td
+                    className={`${codeBg} px-5 py-5 font-bold text-[#3b3b3b] text-left whitespace-nowrap`}
+                  >
+                    {row.code}
+                  </td>
+                  <td className="px-5 py-5 text-[#3b3b3b] text-left">
+                    {row.name}
+                  </td>
+                  <td className="px-5 py-5 text-[#3b3b3b] text-center">
+                    {row.attendance}
+                  </td>
+                  <td className="px-5 py-5 text-[#3b3b3b] text-center">
+                    {row.week7}
+                  </td>
+                  <td className="px-5 py-5 text-[#3b3b3b] text-center">
+                    {row.week12}
+                  </td>
+                  <td className="px-5 py-5 text-[#3b3b3b] text-center">
+                    {row.semesterWork}
+                  </td>
+                  <td className="px-5 py-5 text-center font-bold text-[18px] text-[#1e1e1e] border-l border-portal-teal/70">
+                    {row.finalGrade}
+                  </td>
+                </tr>
+              )
+            })}
           </tbody>
         </table>
       </div>

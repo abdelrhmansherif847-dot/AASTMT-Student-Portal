@@ -1,13 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1c8db0"/>
-      <stop offset="1" stop-color="#0f6f8c"/>
-    </linearGradient>
+    <radialGradient id="seal" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#3aaecf"/>
+      <stop offset="0.6" stop-color="#1c7d9a"/>
+      <stop offset="1" stop-color="#0b4a63"/>
+    </radialGradient>
   </defs>
-  <circle cx="50" cy="50" r="48" fill="url(#g)" stroke="#0f6f8c" stroke-width="2"/>
-  <circle cx="50" cy="50" r="42" fill="none" stroke="#ffffff" stroke-width="1.2"/>
-  <path d="M50 16 L62 38 H38 Z" fill="#ffffff"/>
-  <path d="M28 60 Q50 76 72 60 L72 70 Q50 82 28 70 Z" fill="#ffffff"/>
-  <text x="50" y="56" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="bold" fill="#ffffff">AASTMT</text>
+  <!-- Outer ring -->
+  <circle cx="60" cy="60" r="56" fill="url(#seal)" stroke="#0b4a63" stroke-width="1.5"/>
+  <circle cx="60" cy="60" r="50" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.85"/>
+
+  <!-- Anchor in the middle -->
+  <g fill="#ffffff" opacity="0.95">
+    <circle cx="60" cy="40" r="4.5"/>
+    <rect x="58" y="42" width="4" height="32" rx="1.5"/>
+    <rect x="50" y="48" width="20" height="3" rx="1"/>
+    <path d="M40 64 Q60 92 80 64 L74 64 Q60 84 46 64 Z"/>
+    <!-- Rope arms -->
+    <path d="M40 64 Q34 52 38 44" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <path d="M80 64 Q86 52 82 44" stroke="#ffffff" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Laurel left -->
+  <g fill="none" stroke="#ffffff" stroke-width="1.6" opacity="0.95">
+    <path d="M22 60 Q18 75 30 95"/>
+    <path d="M24 64 Q19 65 16 62"/>
+    <path d="M22 72 Q17 73 15 69"/>
+    <path d="M22 80 Q17 81 16 77"/>
+    <path d="M24 88 Q20 89 19 85"/>
+  </g>
+  <!-- Laurel right -->
+  <g fill="none" stroke="#ffffff" stroke-width="1.6" opacity="0.95">
+    <path d="M98 60 Q102 75 90 95"/>
+    <path d="M96 64 Q101 65 104 62"/>
+    <path d="M98 72 Q103 73 105 69"/>
+    <path d="M98 80 Q103 81 104 77"/>
+    <path d="M96 88 Q100 89 101 85"/>
+  </g>
+
+  <!-- Arabic curve top placeholder -->
+  <path d="M20 26 Q60 6 100 26" fill="none" stroke="#ffffff" stroke-width="1.1" opacity="0.7"/>
 </svg>
