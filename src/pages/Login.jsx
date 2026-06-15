@@ -116,29 +116,41 @@ export default function Login({ onLogin }) {
                   </span>
                 </span>
               </label>
-              <div className="flex flex-col items-center text-[10px] text-[#555] leading-tight shrink-0 ml-3">
-                <svg className="w-[44px] h-[44px]" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  {/* Upper blue arrow — thick crescent with triangular head pointing down-right */}
+              <div className="flex flex-col items-center text-[10px] text-[#6b6b6b] leading-tight shrink-0 ml-3">
+                <svg className="w-[46px] h-[46px]" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  {/* Light-blue base — covers the LEFT half of the top arrow */}
                   <path
-                    d="M 18 50
-                       A 32 32 0 0 1 70 24
-                       L 70 12
-                       L 92 30
-                       L 70 48
-                       L 70 36
-                       A 20 20 0 0 0 30 50
+                    d="M 14 50
+                       A 36 36 0 0 1 79 32
+                       L 79 18
+                       L 102 39
+                       L 79 52
+                       L 79 39
+                       A 22 22 0 0 0 28 50
                        Z"
-                    fill="#1a73e8"
+                    fill="#4a8cf7"
                   />
-                  {/* Lower gray arrow — mirror of the blue one */}
+                  {/* Dark-blue overlay — covers the RIGHT half + arrowhead */}
                   <path
-                    d="M 82 50
-                       A 32 32 0 0 1 30 76
-                       L 30 88
-                       L 8 70
-                       L 30 52
-                       L 30 64
-                       A 20 20 0 0 0 70 50
+                    d="M 50 14
+                       A 36 36 0 0 1 79 32
+                       L 79 18
+                       L 102 39
+                       L 79 52
+                       L 79 39
+                       A 22 22 0 0 0 50 28
+                       Z"
+                    fill="#1e4cbb"
+                  />
+                  {/* Gray bottom arrow */}
+                  <path
+                    d="M 86 50
+                       A 36 36 0 0 1 21 68
+                       L 21 82
+                       L -2 61
+                       L 21 48
+                       L 21 61
+                       A 22 22 0 0 0 72 50
                        Z"
                     fill="#9aa0a6"
                   />
