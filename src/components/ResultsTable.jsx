@@ -15,7 +15,7 @@ const TEAL = '#147a9c'
 export default function ResultsTable() {
   const { results: semesterResults } = useSemester()
   return (
-    <div className="bg-white overflow-hidden rounded shadow-card border border-portal-borderLight">
+    <div className="overflow-hidden rounded border border-portal-borderLight">
       <div className="overflow-x-auto">
         <table className="w-full border-collapse text-[14px]">
           <thead>
@@ -51,8 +51,8 @@ export default function ResultsTable() {
           <tbody>
             {semesterResults.map((row, idx) => {
               const stripe = idx % 2 === 1
-              const rowBg = stripe ? 'bg-[#d2d5d8]' : 'bg-white'
-              const codeBg = stripe ? 'bg-[#b6b9bc]' : 'bg-[#c4c7ca]'
+              const rowBg = stripe ? 'bg-[#dee0e2]' : 'bg-white'
+              const codeBg = stripe ? 'bg-[#c2c5c8]' : 'bg-[#cfd1d4]'
               const cellBase = 'px-3 py-3 text-[#1a1a1a]'
               return (
                 <tr key={row.code} className={rowBg}>

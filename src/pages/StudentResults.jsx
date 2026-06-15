@@ -6,7 +6,7 @@ export default function StudentResults() {
   return (
     <div className="px-6 lg:px-8 py-6 space-y-5">
       {/* Title */}
-      <section>
+      <section className="bg-white rounded shadow-card border border-portal-borderLight p-6">
         <h1 className="text-[28px] font-bold text-[#1a1a1a] leading-tight">
           Student Results
         </h1>
@@ -16,7 +16,7 @@ export default function StudentResults() {
       </section>
 
       {/* Semesters */}
-      <section>
+      <section className="bg-white rounded shadow-card border border-portal-borderLight p-6">
         <h2 className="text-[24px] font-bold text-[#1a1a1a] leading-tight">
           Semesters
         </h2>
@@ -29,14 +29,14 @@ export default function StudentResults() {
       </section>
 
       {/* Semester Results */}
-      <section>
-        <h2 className="text-[26px] font-bold text-[#1a1a1a] mb-3">
+      <section className="bg-white rounded shadow-card border border-portal-borderLight p-6">
+        <h2 className="text-[26px] font-bold text-[#1a1a1a] mb-4">
           Semester Results
         </h2>
         <ResultsTable />
       </section>
 
-      {/* Semester Achievement (note: original spells it "Semster") */}
+      {/* Semester Achievement */}
       <section className="flex justify-center pt-2">
         <SemesterAchievement />
       </section>
