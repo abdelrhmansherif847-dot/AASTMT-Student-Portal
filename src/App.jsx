@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import StudentResults from './pages/StudentResults'
 import Home from './pages/Home'
 import ComingSoon from './components/ComingSoon'
+import { SemesterProvider } from './context/SemesterContext'
 
 const AUTH_KEY = 'aastmt_portal_authed'
 
@@ -38,6 +39,7 @@ export default function App() {
   const handleLogout = () => setAuthed(false)
 
   return (
+    <SemesterProvider>
     <Routes>
       <Route
         path="/login"
@@ -77,5 +79,6 @@ export default function App() {
       />
       <Route path="*" element={<Navigate to={authed ? '/results' : '/login'} replace />} />
     </Routes>
+    </SemesterProvider>
   )
 }

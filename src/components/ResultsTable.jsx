@@ -1,4 +1,4 @@
-import { semesterResults } from '../data/mockData'
+import { useSemester } from '../context/SemesterContext'
 
 const columns = [
   { key: 'code', label: 'Course Code', align: 'left' },
@@ -11,6 +11,7 @@ const columns = [
 ]
 
 export default function ResultsTable() {
+  const { results: semesterResults } = useSemester()
   return (
     <div className="bg-white overflow-hidden border border-portal-borderSoft rounded">
       <div className="overflow-x-auto">

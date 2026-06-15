@@ -4,8 +4,6 @@ export const student = {
   email: 'abdelrahman.sherif@aast.edu',
   college: 'College of Engineering and Technology',
   major: 'Construction & Building Engineering',
-  gpa: 3.1,
-  creditsAchieved: 69.0,
   avatar: '/avatar.svg',
 }
 
@@ -14,88 +12,68 @@ export const credentials = {
   password: '688433',
 }
 
+const passedFromGrade = (grade) =>
+  grade && grade !== 'F' && grade !== 'U' && grade !== 'I'
+
+const buildCourses = (results) =>
+  results.map((r) => ({
+    code: r.code,
+    name: r.name,
+    passed: passedFromGrade(r.finalGrade),
+  }))
+
+const sep2024Results = [
+  { code: 'EBA1103', name: 'Physics I',                  attendance: '5',   week7: '29.00', week12: '19.00', semesterWork: '9.00',  finalGrade: 'B+' },
+  { code: 'EBA1203', name: 'Calculus I',                 attendance: '0',   week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A-' },
+  { code: 'EBA1401', name: 'Statics',                    attendance: '0',   week7: '24.00', week12: '7.00',  semesterWork: '10.00', finalGrade: 'C-' },
+  { code: 'EIM1101', name: 'Manufacturing Technology',   attendance: '3.3', week7: '24.00', week12: '12.00', semesterWork: '10.00', finalGrade: 'B-' },
+  { code: 'EBA1308', name: 'Chemistry',                  attendance: '0',   week7: '16.00', week12: '15.00', semesterWork: '10.00', finalGrade: 'C+' },
+  { code: 'UNR1102', name: 'Creativity And Innovation',  attendance: '13',  week7: '22.00', week12: '17.00', semesterWork: '10.00', finalGrade: 'B+' },
+  { code: 'UNR1403', name: 'Academic English',           attendance: '3.3', week7: '25.00', week12: '19.00', semesterWork: '10.00', finalGrade: 'B'  },
+]
+
+const feb2025Results = [
+  { code: 'EBA1104', name: 'Physics II',                                  attendance: '17',  week7: '16.00', week12: '14.00', semesterWork: '10.00', finalGrade: 'C+' },
+  { code: 'EBA1204', name: 'Calculus II',                                 attendance: '29',  week7: '20.00', week12: '16.00', semesterWork: '10.00', finalGrade: 'B'  },
+  { code: 'EBA1402', name: 'Dynamics',                                    attendance: '6.7', week7: '24.00', week12: '17.00', semesterWork: '10.00', finalGrade: 'B+' },
+  { code: 'ECE1101', name: 'Programming Fundamentals & Problem Solving',  attendance: '3.3', week7: '21.50', week12: '15.50', semesterWork: '8.00',  finalGrade: 'C+' },
+  { code: 'EME1501', name: 'Engineering Drawing & Projection',            attendance: '6.7', week7: '22.00', week12: '18.00', semesterWork: '10.00', finalGrade: 'B'  },
+  { code: 'UNR2101', name: 'Communication And Presentation Skills',       attendance: '10',  week7: '28.50', week12: '15.00', semesterWork: '10.00', finalGrade: 'B+' },
+  { code: 'UNR1407', name: 'Academic Writing',                            attendance: '10',  week7: '23.00', week12: '16.00', semesterWork: '8.50',  finalGrade: 'C+' },
+]
+
+const sep2025Results = [
+  { code: 'EBA2202', name: 'Vector And Complex Analysis',                attendance: '12', week7: '29.00', week12: '18.00', semesterWork: '8.00',  finalGrade: 'A'  },
+  { code: 'ECB2402', name: 'Strength Of Materials',                      attendance: '13', week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
+  { code: 'ECB2801', name: 'Hydraulics Fundamentals',                    attendance: '11', week7: '29.00', week12: '19.00', semesterWork: '7.00',  finalGrade: 'F'  },
+  { code: 'ECB2202', name: 'Building Construction',                      attendance: '13', week7: '28.00', week12: '18.00', semesterWork: '9.00',  finalGrade: 'A'  },
+  { code: 'ECB2702', name: 'Introduction To Transportation Engineering', attendance: '13', week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
+  { code: 'ECB2102', name: 'Introduction To Systems Analysis And Design', attendance: '13', week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
+  { code: 'EEE2404', name: 'Electrical Installations In Buildings',      attendance: '10', week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
+]
+
 export const semesters = [
-  { id: '2026-feb', label: 'فبراير 2026', active: true },
-  { id: '2025-sep', label: 'سبتمبر 2025', active: false },
-  { id: '2025-feb', label: 'فبراير 2025', active: false },
-  { id: '2024-sep', label: 'سبتمبر 2024', active: false },
+  { id: 'sep-2025', label: 'سبتمبر 2025' },
+  { id: 'feb-2025', label: 'فبراير 2025' },
+  { id: 'sep-2024', label: 'سبتمبر 2024' },
 ]
 
-export const courses = [
-  { code: 'EBA2202', name: 'Vector And Complex Analysis', passed: true },
-  { code: 'ECB2402', name: 'Strength Of Materials', passed: true },
-  { code: 'ECB2801', name: 'Hydraulics Fundamentals', passed: false },
-  { code: 'ECB2202', name: 'Building Construction', passed: true },
-  { code: 'ECB2702', name: 'Introduction To Transportation Engineeri', passed: true },
-  { code: 'ECB2102', name: 'Introduction To Systems Analysis And Dec', passed: true },
-  { code: 'EEE2404', name: 'Electrical Installations In Buildings', passed: true },
-]
+export const semesterData = {
+  'sep-2024': {
+    results: sep2024Results,
+    courses: buildCourses(sep2024Results),
+  },
+  'feb-2025': {
+    results: feb2025Results,
+    courses: buildCourses(feb2025Results),
+  },
+  'sep-2025': {
+    results: sep2025Results,
+    courses: buildCourses(sep2025Results),
+  },
+}
 
-export const semesterResults = [
-  {
-    code: 'EBA2202',
-    name: 'Vector And Complex Analysis',
-    attendance: '12',
-    week7: '29.00',
-    week12: '18.00',
-    semesterWork: '8.00',
-    finalGrade: 'A',
-  },
-  {
-    code: 'ECB2402',
-    name: 'Strength Of Materials',
-    attendance: '13',
-    week7: '30.00',
-    week12: '20.00',
-    semesterWork: '10.00',
-    finalGrade: 'A+',
-  },
-  {
-    code: 'ECB2801',
-    name: 'Hydraulics Fundamentals',
-    attendance: '11',
-    week7: '29.00',
-    week12: '19.00',
-    semesterWork: '7.00',
-    finalGrade: 'F',
-  },
-  {
-    code: 'ECB2202',
-    name: 'Building Construction',
-    attendance: '13',
-    week7: '28.00',
-    week12: '18.00',
-    semesterWork: '9.00',
-    finalGrade: 'A',
-  },
-  {
-    code: 'ECB2702',
-    name: 'Introduction To Transportation Engineeri',
-    attendance: '13',
-    week7: '30.00',
-    week12: '20.00',
-    semesterWork: '10.00',
-    finalGrade: 'A+',
-  },
-  {
-    code: 'ECB2102',
-    name: 'Introduction To Systems Analysis And Dec',
-    attendance: '13',
-    week7: '30.00',
-    week12: '20.00',
-    semesterWork: '10.00',
-    finalGrade: 'A+',
-  },
-  {
-    code: 'EEE2404',
-    name: 'Electrical Installations In Buildings',
-    attendance: '10',
-    week7: '30.00',
-    week12: '20.00',
-    semesterWork: '10.00',
-    finalGrade: 'A+',
-  },
-]
+export const DEFAULT_SEMESTER_ID = 'sep-2025'
 
 export const semesterAchievement = {
   semester: { credit: 15.0, gpa: 3.3 },

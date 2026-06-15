@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom'
-import { student, courses, sidebarServices } from '../data/mockData'
+import { student, sidebarServices } from '../data/mockData'
+import { useSemester } from '../context/SemesterContext'
 import { HomeIcon, ServiceIcon } from './icons'
 
 const campusBg =
@@ -18,6 +19,7 @@ function CourseDot({ passed }) {
 
 export default function Sidebar({ onNavigate }) {
   const location = useLocation()
+  const { courses } = useSemester()
 
   const handleServiceClick = (id) => {
     if (id === 'student-results') {
