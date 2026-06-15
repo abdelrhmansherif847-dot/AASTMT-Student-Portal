@@ -116,47 +116,11 @@ export default function Login({ onLogin }) {
                   </span>
                 </span>
               </label>
-              <div className="flex flex-col items-center text-[10px] text-[#6b6b6b] leading-tight shrink-0 ml-3">
-                <svg className="w-[46px] h-[46px]" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  {/* Light-blue base — covers the LEFT half of the top arrow */}
-                  <path
-                    d="M 14 50
-                       A 36 36 0 0 1 79 32
-                       L 79 18
-                       L 102 39
-                       L 79 52
-                       L 79 39
-                       A 22 22 0 0 0 28 50
-                       Z"
-                    fill="#4a8cf7"
-                  />
-                  {/* Dark-blue overlay — covers the RIGHT half + arrowhead */}
-                  <path
-                    d="M 50 14
-                       A 36 36 0 0 1 79 32
-                       L 79 18
-                       L 102 39
-                       L 79 52
-                       L 79 39
-                       A 22 22 0 0 0 50 28
-                       Z"
-                    fill="#1e4cbb"
-                  />
-                  {/* Gray bottom arrow */}
-                  <path
-                    d="M 86 50
-                       A 36 36 0 0 1 21 68
-                       L 21 82
-                       L -2 61
-                       L 21 48
-                       L 21 61
-                       A 22 22 0 0 0 72 50
-                       Z"
-                    fill="#9aa0a6"
-                  />
-                </svg>
-                <span className="mt-0.5">reCAPTCHA</span>
-              </div>
+              <img
+                src="/recaptcha.png"
+                alt="reCAPTCHA"
+                className="h-[58px] w-auto shrink-0 ml-3 object-contain"
+              />
             </div>
 
             <label className="flex items-center gap-2 cursor-pointer">
