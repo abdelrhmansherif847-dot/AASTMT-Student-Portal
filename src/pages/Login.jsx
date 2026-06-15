@@ -117,27 +117,33 @@ export default function Login({ onLogin }) {
                 </span>
               </label>
               <div className="flex flex-col items-center text-[10px] text-[#555] leading-tight shrink-0 ml-3">
-                <svg className="w-[42px] h-[42px]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Upper blue arrow (clockwise top half) */}
+                <svg className="w-[44px] h-[44px]" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  {/* Upper blue arrow — thick crescent with triangular head pointing down-right */}
                   <path
-                    d="M 32 8 A 24 24 0 0 1 56 32"
-                    stroke="#4d90fe"
-                    strokeWidth="6"
-                    strokeLinecap="butt"
-                    fill="none"
+                    d="M 18 50
+                       A 32 32 0 0 1 70 24
+                       L 70 12
+                       L 92 30
+                       L 70 48
+                       L 70 36
+                       A 20 20 0 0 0 30 50
+                       Z"
+                    fill="#1a73e8"
                   />
-                  <polygon points="48,2 60,14 48,14" fill="#4d90fe" />
-                  {/* Lower gray-blue arrow (clockwise bottom half) */}
+                  {/* Lower gray arrow — mirror of the blue one */}
                   <path
-                    d="M 32 56 A 24 24 0 0 1 8 32"
-                    stroke="#9aa9b8"
-                    strokeWidth="6"
-                    strokeLinecap="butt"
-                    fill="none"
+                    d="M 82 50
+                       A 32 32 0 0 1 30 76
+                       L 30 88
+                       L 8 70
+                       L 30 52
+                       L 30 64
+                       A 20 20 0 0 0 70 50
+                       Z"
+                    fill="#9aa0a6"
                   />
-                  <polygon points="16,62 4,50 16,50" fill="#9aa9b8" />
                 </svg>
-                reCAPTCHA
+                <span className="mt-0.5">reCAPTCHA</span>
               </div>
             </div>
 
