@@ -98,10 +98,10 @@ export default function Navbar({ onLogout }) {
 
         <button
           type="button"
-          className="ml-2 hidden md:flex items-center gap-1.5 text-portal-primary hover:opacity-80"
+          className="ml-2 hidden md:flex items-center gap-1.5 hover:opacity-80"
         >
-          <NewsIcon className="w-[18px] h-[18px]" />
-          <span className="text-[15px]">News</span>
+          <NewsIcon className="w-[20px] h-[20px] text-[#147a9c]" />
+          <span className="text-[15px] text-[#1a1a1a] font-medium">News</span>
         </button>
 
         <div className="flex-1" />
@@ -165,10 +165,10 @@ export default function Navbar({ onLogout }) {
           <button
             type="button"
             onClick={() => setNotifOpen((v) => !v)}
-            className="relative ml-1 text-portal-primary hover:opacity-80"
+            className="relative ml-1 text-[#1a3a5c] hover:opacity-80"
           >
             <BellIcon className="w-[22px] h-[22px]" />
-            <span className="absolute -top-1.5 -right-1.5 bg-portal-notifBadge text-white text-[10px] leading-none font-bold rounded-full w-[16px] h-[16px] flex items-center justify-center">
+            <span className="absolute -top-1.5 -right-1.5 bg-[#5cc6e8] text-white text-[10px] leading-none font-bold rounded-full w-[16px] h-[16px] flex items-center justify-center">
               {notifications.length}
             </span>
           </button>

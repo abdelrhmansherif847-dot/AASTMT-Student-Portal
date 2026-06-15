@@ -39,28 +39,24 @@ export default function Sidebar({ onNavigate }) {
   return (
     <aside className="w-[290px] shrink-0 bg-white border-r border-portal-borderLight h-[calc(100vh-63px)] overflow-y-auto portal-scroll shadow-sidebar">
       <div
-        className="relative h-[170px] bg-cover bg-center text-white"
+        className="relative h-[210px] bg-cover bg-center text-white"
         style={{ backgroundImage: campusBg }}
       >
-        {/* Soft gradient only over the bottom half so the student name stays
-            readable on the bright building/palms area, while preserving the
-            bilingual AAST overlay baked into the top of the banner. */}
-        <div className="absolute inset-x-0 bottom-0 h-[80%] bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+        {/* Soft bottom gradient so the student name stays readable */}
+        <div className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <div className="relative h-full flex flex-col justify-end p-3">
-          <div className="flex items-end gap-2 mb-1">
-            <img
-              src={student.avatar}
-              alt={student.name}
-              className="w-[44px] h-[44px] rounded-full ring-2 ring-white object-cover shrink-0"
-            />
-          </div>
-          <div className="leading-tight pl-1">
-            <div className="font-bold text-[15px] drop-shadow leading-tight">
+          <img
+            src={student.avatar}
+            alt={student.name}
+            className="w-[64px] h-[64px] rounded-full ring-2 ring-white object-cover shrink-0 mb-2"
+          />
+          <div className="leading-tight pl-0.5">
+            <div className="font-bold text-[16px] drop-shadow-lg leading-snug">
               {student.name.split(' ').slice(0, 4).join(' ')}
               <br />
               {student.name.split(' ').slice(4).join(' ')}
             </div>
-            <div className="text-[13px] text-white/85 mt-1">
+            <div className="text-[13px] text-white/90 mt-1.5 drop-shadow">
               {student.registrationNumber}
             </div>
           </div>
@@ -82,7 +78,7 @@ export default function Sidebar({ onNavigate }) {
         </button>
 
         <div className="px-5 pt-4 pb-2">
-          <span className="text-portal-tabSelected font-bold text-[15px]">Courses</span>
+          <span className="text-[#147a9c] font-bold text-[15px]">Courses</span>
         </div>
         <ul className="pb-3">
           {courses.map((c) => {
@@ -109,7 +105,7 @@ export default function Sidebar({ onNavigate }) {
         <div className="border-t border-portal-borderLight" />
 
         <div className="px-5 pt-4 pb-2">
-          <span className="text-portal-tabSelected font-bold text-[15px]">Services</span>
+          <span className="text-[#147a9c] font-bold text-[15px]">Services</span>
         </div>
         <ul>
           {sidebarServices.map((s) => {
