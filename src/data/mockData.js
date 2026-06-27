@@ -127,13 +127,13 @@ const sep2025Results = [
 ]
 
 const feb2026Results = [
-  { code: 'ECB2202', name: 'Building Construction',                       attendance: '6.7', week7: '28.00', week12: '18.00', semesterWork: '9.00',  finalGrade: 'A'  },
+  { code: 'ECB2202', name: 'Building Construction',                       attendance: '6.7', week7: '28.00', week12: '18.00', semesterWork: '9.00',  finalGrade: 'F'  },
   { code: 'ECB2801', name: 'Hydraulics Fundamentals',                     attendance: '11',  week7: '29.00', week12: '19.00', semesterWork: '7.00',  finalGrade: 'F'  },
   { code: 'ECB2402', name: 'Strength Of Materials',                       attendance: '8.9', week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
-  { code: 'EEE2404', name: 'Electrical Installations In Buildings',       attendance: '10',  week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
+  { code: 'EEE2404', name: 'Electrical Installations In Buildings',       attendance: '10',  week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A' },
   { code: 'ECB2102', name: 'Introduction To Systems Analysis And Dec',    attendance: '13',  week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
   { code: 'ECB2702', name: 'Introduction To Transportation Engineeri',    attendance: '13',  week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
-  { code: 'EBA2202', name: 'Vector And Complex Analysis',                 attendance: '3.3', week7: '29.00', week12: '18.00', semesterWork: '8.00',  finalGrade: 'A'  },
+  { code: 'EBA2202', name: 'Vector And Complex Analysis',                 attendance: '3.3', week7: '29.00', week12: '18.00', semesterWork: '8.00',  finalGrade: 'A+'  },
 ]
 
 export const semesters = [
@@ -149,7 +149,7 @@ export const semesterData = {
     courses: buildCourses(sep2024Results),
     achievement: {
       semester: { credit: 18.0, gpa: 2.8 },
-      total: { credit: 69.0, gpa: 3.1 },
+      total: { credit: 66.0, gpa: 2.8 },
     },
   },
   'feb-2025': {
@@ -157,7 +157,7 @@ export const semesterData = {
     courses: buildCourses(feb2025Results),
     achievement: {
       semester: { credit: 18.0, gpa: 2.6 },
-      total: { credit: 69.0, gpa: 3.1 },
+      total: { credit: 66.0, gpa: 2.8 },
     },
   },
   'sep-2025': {
@@ -165,15 +165,15 @@ export const semesterData = {
     courses: buildCourses(sep2025Results),
     achievement: {
       semester: { credit: 18.0, gpa: 2.9 },
-      total: { credit: 69.0, gpa: 3.1 },
+      total: { credit: 66.0, gpa: 2.8 },
     },
   },
   'feb-2026': {
     results: feb2026Results,
     courses: buildCourses(feb2026Results),
     achievement: {
-      semester: { credit: 15.0, gpa: 3.3 },
-      total: { credit: 69.0, gpa: 3.1 },
+      semester: { credit: 12.0, gpa: 2.6 },
+      total: { credit: 66.0, gpa: 2.8 },
     },
   },
 }
