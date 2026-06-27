@@ -133,7 +133,7 @@ const feb2026Results = [
   { code: 'EEE2404', name: 'Electrical Installations In Buildings',       attendance: '10',  week7: '29.00', week12: '19.00', semesterWork: '10.00', finalGrade: 'A' },
   { code: 'ECB2102', name: 'Introduction To Systems Analysis And Dec',    attendance: '13',  week7: '30.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'A+' },
   { code: 'ECB2702', name: 'Introduction To Transportation Engineeri',    attendance: '13',  week7: '30.00', week12: '20.00', semesterWork: '9.00', finalGrade: 'A+' },
-  { code: 'EBA2202', name: 'Vector And Complex Analysis',                 attendance: '3.3', week7: '29.00', week12: '18.00', semesterWork: '8.00',  finalGrade: 'A+'  },
+  { code: 'EBA2202', name: 'Vector And Complex Analysis',                 attendance: '3.3', week7: '29.00', week12: '20.00', semesterWork: '10.00',  finalGrade: 'A+'  },
 ]
 
 export const semesters = [
