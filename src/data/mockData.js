@@ -136,12 +136,23 @@ const feb2026Results = [
   { code: 'EBA2202', name: 'Vector And Complex Analysis',                 attendance: '3.3', week7: '29.00', week12: '20.00', semesterWork: '10.00',  finalGrade: 'A+'  },
 ]
 
+const summer2026Results = [
+  { code: 'ECB3602*', name: 'Soil Mechanics',        attendance: '0', week7: '26.00', week12: '17.00', semesterWork: '10.00', finalGrade: 'B+' },
+  { code: 'ECB2202',  name: 'Building Construction', attendance: '0', week7: '24.00', week12: '20.00', semesterWork: '10.00', finalGrade: 'B+' },
+]
+
 export const semesters = [
   { id: 'sep-2024', label: 'سبتمبر 2024' },
   { id: 'feb-2025', label: 'فبراير 2025' },
   { id: 'sep-2025', label: 'سبتمبر 2025' },
   { id: 'feb-2026', label: 'فبراير 2026' },
+  { id: 'summer-2026', label: 'صيف 2026' },
 ]
+
+// Cumulative standing across every semester. The portal shows the same
+// Total Achievement no matter which semester tab is selected, so it lives in
+// one place and every semester references it.
+const totalAchievement = { credit: 72.0, gpa: 3.0 }
 
 export const semesterData = {
   'sep-2024': {
@@ -149,7 +160,7 @@ export const semesterData = {
     courses: buildCourses(sep2024Results),
     achievement: {
       semester: { credit: 18.0, gpa: 2.8 },
-      total: { credit: 66.0, gpa: 2.8 },
+      total: { ...totalAchievement },
     },
   },
   'feb-2025': {
@@ -157,7 +168,7 @@ export const semesterData = {
     courses: buildCourses(feb2025Results),
     achievement: {
       semester: { credit: 18.0, gpa: 2.6 },
-      total: { credit: 66.0, gpa: 2.8 },
+      total: { ...totalAchievement },
     },
   },
   'sep-2025': {
@@ -165,7 +176,7 @@ export const semesterData = {
     courses: buildCourses(sep2025Results),
     achievement: {
       semester: { credit: 18.0, gpa: 2.9 },
-      total: { credit: 66.0, gpa: 2.8 },
+      total: { ...totalAchievement },
     },
   },
   'feb-2026': {
@@ -173,12 +184,20 @@ export const semesterData = {
     courses: buildCourses(feb2026Results),
     achievement: {
       semester: { credit: 12.0, gpa: 2.6 },
-      total: { credit: 66.0, gpa: 2.8 },
+      total: { ...totalAchievement },
+    },
+  },
+  'summer-2026': {
+    results: summer2026Results,
+    courses: buildCourses(summer2026Results),
+    achievement: {
+      semester: { credit: 6.0, gpa: 3.3 },
+      total: { ...totalAchievement },
     },
   },
 }
 
-export const DEFAULT_SEMESTER_ID = 'feb-2026'
+export const DEFAULT_SEMESTER_ID = 'summer-2026'
 
 export const sidebarServices = [
   { id: 'student-results', label: 'Student Results', icon: 'graduation' },

@@ -5,8 +5,15 @@ import { semesterData, semesters } from '../data/mockData'
 
 const TABS = ['Overview', 'Content', 'Community', 'Members', 'Book']
 
-function findCourse(code) {
-  for (const semId of Object.keys(semesterData)) {
+// A course can be taken more than once (e.g. ECB2202 was retaken in صيف 2026),
+// so look in the semester the student is currently viewing before falling back
+// to a scan of every semester.
+function findCourse(code, preferredSemId) {
+  const semIds = Object.keys(semesterData)
+  const order = semesterData[preferredSemId]
+    ? [preferredSemId, ...semIds.filter((id) => id !== preferredSemId)]
+    : semIds
+  for (const semId of order) {
     const found = semesterData[semId].results.find((r) => r.code === code)
     if (found) return { semId, course: found }
   }
@@ -16,10 +23,10 @@ function findCourse(code) {
 export default function CourseDetail() {
   const { code } = useParams()
   const navigate = useNavigate()
-  const { setSelectedId } = useSemester()
+  const { selectedId, setSelectedId } = useSemester()
   const [activeTab, setActiveTab] = useState('Overview')
 
-  const match = findCourse(code)
+  const match = findCourse(code, selectedId)
 
   useEffect(() => {
     if (match) setSelectedId(match.semId)
